@@ -18,7 +18,7 @@ const slides = [
     index: '01',
     category: 'Photo Studio',
     image:
-      'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&w=2000&q=85',
+      'https://images.unsplash.com/photo-1554941829-202a0b2403b8?auto=format&fit=crop&w=2000&q=85',
     location: 'Bushwick, Brooklyn',
     title: (
       <>
@@ -28,17 +28,17 @@ const slides = [
       </>
     ),
     description:
-      'Daylight lofts, seamless cyc walls and rooms that already have the gear. Find the space; bring the idea.',
+      'Seamless cyc walls, blackout control and rooms that already have the gear. Find the space; bring the idea.',
     rate: 'From $55 / hr',
     rating: '4.9 average rating',
-    detail: '12 people · natural light',
+    detail: '12 people · cyc wall',
   },
   {
     id: 'stage',
     index: '02',
     category: 'Sound Stage',
     image:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=2000&q=85',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=85',
     location: 'Greenpoint, Brooklyn',
     title: (
       <>
@@ -58,7 +58,7 @@ const slides = [
     index: '03',
     category: 'Podcast Room',
     image:
-      'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=2000&q=85',
+      'https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=2000&q=85',
     location: 'SoHo, Manhattan',
     title: (
       <>
@@ -109,7 +109,7 @@ export function HeroSlider() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0907]/85 via-transparent to-[#0b0907]/35" />
 
                 <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start justify-between p-5 sm:p-7">
-                  <span className="rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/90 backdrop-blur-md">
+                  <span className="hidden rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/90 backdrop-blur-md sm:inline-flex">
                     Creative spaces, by the hour
                   </span>
                   <span className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[0.68rem] font-medium text-white/75 backdrop-blur-md sm:flex">
@@ -120,7 +120,7 @@ export function HeroSlider() {
 
                 <div className="relative z-10 flex h-full flex-col justify-end px-5 pb-5 pt-28 sm:px-8 sm:pb-7 lg:px-12 lg:pb-8">
                   <div className="max-w-2xl animate-fade-up">
-                    <div className="mb-4 flex items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.2em] text-white/60">
+                    <div className="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-white/60 sm:gap-3 sm:text-[0.66rem] sm:tracking-[0.2em]">
                       <span className="text-[#f2a97e]">{slide.index}</span>
                       <span className="h-px w-7 bg-white/25" />
                       {slide.category} · {slide.location}
