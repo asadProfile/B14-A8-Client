@@ -54,8 +54,9 @@ double bookings.
 | Data | Express API on the same origin through Next rewrites |
 | Auth | HTTPOnly, SameSite=Lax JWT cookie; optional Google OAuth |
 
-The API lives in [`../server`](../server) and is documented in
-[`../server/README.md`](../server/README.md).
+The API is a separate repository, checked out next to this one as
+[`../B14-A8-Server`](../B14-A8-Server), and is documented in
+[`../B14-A8-Server/README.md`](../B14-A8-Server/README.md).
 
 ## Local setup
 
@@ -64,8 +65,10 @@ one for the client.
 
 ### 1. API
 
+Open the API repository folder (`B14-A8-Server`, next to this one):
+
 ```bash
-cd server
+cd ../B14-A8-Server
 npm install
 cp .env.example .env
 npm run dev
@@ -77,8 +80,9 @@ seeds 14 studios, 42 reviews and 7 bookings automatically. The API listens on
 
 ### 2. Client
 
+Run these from this folder (the client repository root):
+
 ```bash
-cd client
 npm install
 cp .env.example .env
 npm run dev
