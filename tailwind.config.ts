@@ -67,10 +67,15 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-8px)' },
         },
+        'slide-in': {
+          from: { transform: 'translateX(100%)' },
+          to: { transform: 'translateX(0)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both',
         'fade-in': 'fade-in 0.5s ease-out both',
+        'slide-in': 'slide-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both',
         marquee: 'marquee 38s linear infinite',
         shimmer: 'shimmer 1.8s linear infinite',
         'spin-slow': 'spin-slow 14s linear infinite',
