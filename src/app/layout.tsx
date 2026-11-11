@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Manrope } from 'next/font/google';
+import { ThemeProvider } from '@/context/ThemeProvider';
+import { Toaster } from '@/components/ui/Toaster';
 import './globals.css';
 
 const display = Fraunces({
@@ -66,13 +68,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={`${display.variable} ${sans.variable} grain font-sans`}>
-        <a
-          href="#main-content"
-          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-ink transition focus:translate-y-0"
-        >
-          Skip to content
-        </a>
-        {children}
+        <ThemeProvider>
+          <a
+            href="#main-content"
+            className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-ink transition focus:translate-y-0"
+          >
+            Skip to content
+          </a>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
