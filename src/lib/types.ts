@@ -108,3 +108,41 @@ export type ApiErrorPayload = {
   message: string;
   details?: { field: string; message: string }[];
 };
+
+export type RegisterInput = {
+  name: string;
+  email: string;
+  photoURL?: string;
+  password: string;
+};
+
+export type LoginInput = {
+  email: string;
+  password: string;
+};
+
+export type StudioPayload = {
+  title: string;
+  category: StudioCategory;
+  hourlyRate: number;
+  securityDeposit: number;
+  capacity: number;
+  location: string;
+  imageURL: string;
+  images: string[];
+  amenities: string[];
+  overview: string;
+};
+
+export type BookingInput = {
+  studioId: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+  note?: string;
+};
+
+export type ReviewInput = {
+  rating: number;
+  comment: string;
+};
