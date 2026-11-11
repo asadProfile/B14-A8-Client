@@ -69,6 +69,12 @@ export const CATEGORY_CARDS: {
     tagline: 'Mess-friendly tables, light and sinks',
     image: image('1519710164239-da123dc03ef4'),
   },
+  {
+    name: 'Event Space',
+    label: 'Event Spaces',
+    tagline: 'Open rooms for launches and screenings',
+    image: image('1519167758481-83f550bb49b3'),
+  },
 ];
 
 export const SORT_OPTIONS = [
